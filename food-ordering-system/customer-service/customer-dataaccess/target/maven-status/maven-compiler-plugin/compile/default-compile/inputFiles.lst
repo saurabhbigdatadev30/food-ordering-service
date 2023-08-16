@@ -1,0 +1,5 @@
+C:\codebases\food-ordering-system\customer-service\customer-dataaccess\src\main\java\com\food\ordering\system\customer\service\dataaccess\customer\exception\CustomerDataaccessException.java
+C:\codebases\food-ordering-system\customer-service\customer-dataaccess\src\main\java\com\food\ordering\system\customer\service\dataaccess\customer\repository\CustomerJpaRepository.java
+C:\codebases\food-ordering-system\customer-service\customer-dataaccess\src\main\java\com\food\ordering\system\customer\service\dataaccess\customer\mapper\CustomerDataAccessMapper.java
+C:\codebases\food-ordering-system\customer-service\customer-dataaccess\src\main\java\com\food\ordering\system\customer\service\dataaccess\customer\entity\CustomerEntity.java
+C:\codebases\food-ordering-system\customer-service\customer-dataaccess\src\main\java\com\food\ordering\system\customer\service\dataaccess\customer\adapter\CustomerRepositoryImpl.java

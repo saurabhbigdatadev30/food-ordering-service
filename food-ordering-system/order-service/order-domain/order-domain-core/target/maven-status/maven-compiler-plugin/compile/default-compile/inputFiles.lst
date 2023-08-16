@@ -1,0 +1,16 @@
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\valueobject\OrderItemId.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\entity\Order.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\valueobject\TrackingId.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\entity\Restaurant.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\event\OrderCancelledEvent.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\event\OrderPaidEvent.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\OrderDomainService.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\entity\Product.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\entity\Customer.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\exception\OrderNotFoundException.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\OrderDomainServiceImpl.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\event\OrderCreatedEvent.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\event\OrderEvent.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\entity\OrderItem.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\exception\OrderDomainException.java
+C:\codebases\food-ordering-system\order-service\order-domain\order-domain-core\src\main\java\com\food\ordering\system\order\service\domain\valueobject\StreetAddress.java
