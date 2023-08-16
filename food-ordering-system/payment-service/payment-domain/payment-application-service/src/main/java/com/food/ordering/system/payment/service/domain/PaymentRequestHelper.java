@@ -55,9 +55,11 @@ public class PaymentRequestHelper {
     }
 
     @Transactional
-    public void persistPayment(PaymentRequest paymentRequest) {
-        if (publishIfOutboxMessageProcessedForPayment(paymentRequest, PaymentStatus.COMPLETED)) {
-            log.info("An outbox message with saga id: {} is already saved to database!",
+    public void persistPayment(PaymentRequest paymentRequest)
+    {
+        if (publishIfOutboxMessageProcessedForPayment(paymentRequest, PaymentStatus.COMPLETED))
+        {
+            log.info("An outbox message with saga the  id : {} is already saved to database!",
                     paymentRequest.getSagaId());
             return;
         }
