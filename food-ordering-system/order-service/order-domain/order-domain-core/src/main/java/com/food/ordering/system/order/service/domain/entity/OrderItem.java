@@ -15,7 +15,8 @@ public class OrderItem extends BaseEntity<OrderItemId>
     private final Money price;
     private final Money subTotal;
 
-    void initializeOrderItem(OrderId orderId, OrderItemId orderItemId) {
+    void initializeOrderItem(OrderId orderId, OrderItemId orderItemId)
+    {
         this.orderId = orderId;
         super.setId(orderItemId);
     }
@@ -106,7 +107,7 @@ public class OrderItem extends BaseEntity<OrderItemId>
 
         public OrderItem build()
         {
-            // TEST TO CHECK [TEST 4]
+            // TEST TO CHECK [TEST 5]
                return new OrderItem(this);
         }
     }
