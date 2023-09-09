@@ -59,12 +59,12 @@ public class PaymentRequestHelper {
     {
         if (publishIfOutboxMessageProcessedForPayment(paymentRequest, PaymentStatus.COMPLETED))
         {
-            log.info("An outbox message with saga the  id : {} is already saved to database!",
+            log.info("An outbox message with saga the id = {} is already saved to database!",
                     paymentRequest.getSagaId());
             return;
         }
 
-        log.info("Received payment complete event for order id: {}", paymentRequest.getOrderId());
+        log.info("Received payment complete event for order id = {}", paymentRequest.getOrderId());
         Payment payment = paymentDataMapper.paymentRequestModelToPayment(paymentRequest);
         CreditEntry creditEntry = getCreditEntry(payment.getCustomerId());
         List<CreditHistory> creditHistories = getCreditHistory(payment.getCustomerId());
