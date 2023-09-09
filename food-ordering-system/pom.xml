@@ -34,10 +34,10 @@
     </properties>
 
     <dependencyManagement>
-        <dependencies>
+         <dependencies>
             <dependency>
-                <groupId>com.food.ordering.system</groupId>
-                <artifactId>saga</artifactId>
+                 <groupId>com.food.ordering.system</groupId>
+                  <artifactId>saga</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
