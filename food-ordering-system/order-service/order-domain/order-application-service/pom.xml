@@ -12,7 +12,7 @@
     <artifactId>order-application-service</artifactId>
 
     <properties>
-    </properties>
+     </properties>
 
     <dependencies>
         <dependency>
