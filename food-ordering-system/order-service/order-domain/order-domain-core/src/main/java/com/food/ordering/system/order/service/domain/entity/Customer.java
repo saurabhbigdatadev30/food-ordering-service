@@ -6,7 +6,7 @@ import com.food.ordering.system.domain.valueobject.CustomerId;
 public class Customer extends AggregateRoot<CustomerId> {
 
     private String username;
-    private String firstName;
+     private String firstName;
     private String lastName;
 
     public Customer(CustomerId customerId, String username, String firstName, String lastName) {
