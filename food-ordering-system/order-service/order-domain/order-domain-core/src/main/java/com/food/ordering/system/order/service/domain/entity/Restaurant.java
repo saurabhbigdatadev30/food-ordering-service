@@ -12,8 +12,8 @@ public class Restaurant extends AggregateRoot<RestaurantId>
 
     private Restaurant(Builder builder)
     {
-        super.setId(builder.restaurantId);
-        products = builder.products;
+         super.setId(builder.restaurantId);
+         products = builder.products;
         active = builder.active;
     }
 
