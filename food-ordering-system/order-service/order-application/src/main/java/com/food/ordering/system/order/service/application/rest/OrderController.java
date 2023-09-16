@@ -27,10 +27,9 @@ public class OrderController {
     public ResponseEntity<CreateOrderResponse> createOrder(@RequestBody CreateOrderCommand createOrderCommand) {
         log.info("Creating order for customer = {} at restaurant = {}", createOrderCommand.getCustomerId(),
                    createOrderCommand.getRestaurantId());
-        log.debug("Creating order for customer = {} at restaurant = {}", createOrderCommand.getCustomerId(),
-                createOrderCommand.getRestaurantId());
         CreateOrderResponse createOrderResponse = orderApplicationService.createOrder(createOrderCommand);
         log.info("Order created with tracking id -  {} ", createOrderResponse.getOrderTrackingId());
+        log.debug("Order created with tracking id -  {} >>", createOrderResponse.getOrderTrackingId());
         return ResponseEntity.ok(createOrderResponse);
     }
 
@@ -39,7 +38,6 @@ public class OrderController {
        TrackOrderResponse trackOrderResponse =
                orderApplicationService.trackOrder(TrackOrderQuery.builder().orderTrackingId(trackingId).build());
        log.info("Returning order status with tracking id: {}", trackOrderResponse.getOrderTrackingId());
-       log.debug("Returning order status with tracking id: {}", trackOrderResponse.getOrderTrackingId());
        return  ResponseEntity.ok(trackOrderResponse);
     }
 }
