@@ -20,6 +20,7 @@ public class OrderGlobalExceptionHandler extends GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorDTO handleException(OrderDomainException orderDomainException) {
         log.error(orderDomainException.getMessage(), orderDomainException);
+		 log.info(orderDomainException.getMessage(), orderDomainException);
         return ErrorDTO.builder()
                 .code(HttpStatus.BAD_REQUEST.getReasonPhrase())
                 .message(orderDomainException.getMessage())
