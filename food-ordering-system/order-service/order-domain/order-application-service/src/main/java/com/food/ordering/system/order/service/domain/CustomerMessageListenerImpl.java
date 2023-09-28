@@ -25,7 +25,7 @@ public class CustomerMessageListenerImpl implements CustomerMessageListener {
     public void testMethod2(){
         log.info("TEST METHOD");
     }
-    
+
     @Override
     public void customerCreated(CustomerModel customerModel) {
         Customer customer = customerRepository.save(orderDataMapper.customerModelToCustomer(customerModel));
