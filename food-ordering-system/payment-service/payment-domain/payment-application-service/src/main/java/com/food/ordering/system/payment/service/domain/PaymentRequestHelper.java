@@ -111,6 +111,9 @@ public class PaymentRequestHelper {
 
     }
 
+    public void testMethod(){
+        log.info("TEST METHOD");
+    }
     private CreditEntry getCreditEntry(CustomerId customerId) {
         Optional<CreditEntry> creditEntry = creditEntryRepository.findByCustomerId(customerId);
         if (creditEntry.isEmpty()) {
