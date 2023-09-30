@@ -33,4 +33,8 @@ class OrderApplicationServiceImpl implements OrderApplicationService
     public TrackOrderResponse trackOrder(TrackOrderQuery trackOrderQuery) {
         return orderTrackCommandHandler.trackOrder(trackOrderQuery);
     }
+
+    public void testMethod(){
+        log.info("testMethod in the testBranch1 only");
+    }
 }
