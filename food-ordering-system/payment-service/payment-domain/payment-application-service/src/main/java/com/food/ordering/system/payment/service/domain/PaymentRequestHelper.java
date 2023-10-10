@@ -57,7 +57,7 @@ public class PaymentRequestHelper {
     @Transactional
     public void persistPayment(PaymentRequest paymentRequest)
     {
-        log.error("inside persist method");
+        log.info("inside persist method");
         int a = 22;
         if (publishIfOutboxMessageProcessedForPayment(paymentRequest, PaymentStatus.COMPLETED))
         {
