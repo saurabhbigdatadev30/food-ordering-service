@@ -57,7 +57,7 @@ public class PaymentRequestHelper {
     @Transactional
     public void persistPayment(PaymentRequest paymentRequest)
     {
-        log.info("inside persist method");
+        log.error("inside persist method");
         if (publishIfOutboxMessageProcessedForPayment(paymentRequest, PaymentStatus.COMPLETED))
         {
             log.info("An outbox message with saga the id = {} is already saved to database!",
@@ -88,7 +88,7 @@ public class PaymentRequestHelper {
             return;
         }
 
-        log.info("Received payment rollback event for order id: {}", paymentRequest.getOrderId());
+        log.error("Received payment rollback event for order id: {}", paymentRequest.getOrderId());
         Optional<Payment> paymentResponse = paymentRepository
                 .findByOrderId(UUID.fromString(paymentRequest.getOrderId()));
         if (paymentResponse.isEmpty()) {
