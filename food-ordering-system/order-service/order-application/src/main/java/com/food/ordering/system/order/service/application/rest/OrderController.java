@@ -29,7 +29,6 @@ public class OrderController {
                    createOrderCommand.getRestaurantId());
         CreateOrderResponse createOrderResponse = orderApplicationService.createOrder(createOrderCommand);
         log.info("Order created with tracking id ==  {} ", createOrderResponse.getOrderTrackingId());
-        log.error("Order created with tracking id ==  {} ", createOrderResponse.getOrderTrackingId());
         return ResponseEntity.ok(createOrderResponse);
     }
 
