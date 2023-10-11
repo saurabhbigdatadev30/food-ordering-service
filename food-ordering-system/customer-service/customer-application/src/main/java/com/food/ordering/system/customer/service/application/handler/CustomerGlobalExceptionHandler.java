@@ -19,6 +19,7 @@ public class CustomerGlobalExceptionHandler extends GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorDTO handleException(CustomerDomainException exception) {
         log.error(exception.getMessage(), exception);
+        log.info(exception.getMessage(), exception);
         return ErrorDTO.builder().code(HttpStatus.BAD_REQUEST.getReasonPhrase())
                 .message(exception.getMessage()).build();
     }

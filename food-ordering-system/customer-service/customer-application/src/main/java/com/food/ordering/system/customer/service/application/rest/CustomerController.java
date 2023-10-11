@@ -25,7 +25,9 @@ public class CustomerController {
     public ResponseEntity<CreateCustomerResponse> createCustomer(@RequestBody CreateCustomerCommand
                                                                              createCustomerCommand) {
         log.info("Creating customer with username: {}", createCustomerCommand.getUsername());
+
         int a  = 10;
+
         CreateCustomerResponse response = customerApplicationService.createCustomer(createCustomerCommand);
         return ResponseEntity.ok(response);
     }
