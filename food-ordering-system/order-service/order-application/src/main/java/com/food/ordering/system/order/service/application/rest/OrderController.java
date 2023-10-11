@@ -25,9 +25,12 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<CreateOrderResponse> createOrder(@RequestBody CreateOrderCommand createOrderCommand) {
+
           int a = 7;
-        log.error("Creating order for customer == {} at restaurant == {}", createOrderCommand.getCustomerId(),
-                   createOrderCommand.getRestaurantId());
+         log.info("Creating order for customer == {} at restaurant == {}", createOrderCommand.getCustomerId(),
+                createOrderCommand.getRestaurantId());
+
+        log.info("Creating order for customer == {} at restaurant == {}", createOrderCommand.getCustomerId(), createOrderCommand.getRestaurantId());
         CreateOrderResponse createOrderResponse = orderApplicationService.createOrder(createOrderCommand);
         log.info("Order created with tracking id ==  {} ", createOrderResponse.getOrderTrackingId());
         return ResponseEntity.ok(createOrderResponse);
