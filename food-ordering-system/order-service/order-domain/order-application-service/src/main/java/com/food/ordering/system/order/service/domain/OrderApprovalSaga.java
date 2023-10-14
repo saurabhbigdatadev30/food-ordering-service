@@ -57,6 +57,7 @@ public class OrderApprovalSaga implements SagaStep<RestaurantApprovalResponse> {
         if (orderApprovalOutboxMessageResponse.isEmpty()) {
             log.info("An outbox message with saga id: {} is already processed!",
                     restaurantApprovalResponse.getSagaId());
+            log.info("In TestBranch XX");
             return;
         }
 
