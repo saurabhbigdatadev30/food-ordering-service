@@ -117,16 +117,17 @@ public class OrderApprovalSaga implements SagaStep<RestaurantApprovalResponse> {
         return order;
     }
 
-    private OrderApprovalOutboxMessage getUpdatedApprovalOutboxMessage(OrderApprovalOutboxMessage
-                                                                               orderApprovalOutboxMessage,
-                                                                       OrderStatus
-                                                                               orderStatus,
-                                                                       SagaStatus
-                                                                               sagaStatus) {
+    private OrderApprovalOutboxMessage getUpdatedApprovalOutboxMessage(OrderApprovalOutboxMessage orderApprovalOutboxMessage,
+                                                                       OrderStatus orderStatus,
+                                                                       SagaStatus sagaStatus)
+    {
+        log.info("In TestBranch ");
         orderApprovalOutboxMessage.setProcessedAt(ZonedDateTime.now(ZoneId.of(UTC)));
         orderApprovalOutboxMessage.setOrderStatus(orderStatus);
         orderApprovalOutboxMessage.setSagaStatus(sagaStatus);
+        log.info("In TestBranch XX");
         return orderApprovalOutboxMessage;
+
     }
 
     private OrderPaymentOutboxMessage getUpdatedPaymentOutboxMessage(String sagaId,

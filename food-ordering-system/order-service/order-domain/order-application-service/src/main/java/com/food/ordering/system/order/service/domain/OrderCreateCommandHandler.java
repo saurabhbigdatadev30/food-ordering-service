@@ -24,7 +24,9 @@ public class OrderCreateCommandHandler {
     public OrderCreateCommandHandler(OrderCreateHelper orderCreateHelper,
                                      OrderDataMapper orderDataMapper,
                                      PaymentOutboxHelper paymentOutboxHelper,
-                                     OrderSagaHelper orderSagaHelper) {
+                                     OrderSagaHelper orderSagaHelper)
+    {
+        log.info("In TestBranch ");
         this.orderCreateHelper = orderCreateHelper;
         this.orderDataMapper = orderDataMapper;
         this.paymentOutboxHelper = paymentOutboxHelper;
@@ -35,6 +37,7 @@ public class OrderCreateCommandHandler {
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand)
     {
         log.info("In TestBranch ");
+        log.error("In TestBranch 5 ");
         OrderCreatedEvent orderCreatedEvent = orderCreateHelper.persistOrder(createOrderCommand);
         log.info("Order is created with id: {}", orderCreatedEvent.getOrder().getId().getValue());
         CreateOrderResponse createOrderResponse = orderDataMapper.orderToCreateOrderResponse(orderCreatedEvent.getOrder(),
