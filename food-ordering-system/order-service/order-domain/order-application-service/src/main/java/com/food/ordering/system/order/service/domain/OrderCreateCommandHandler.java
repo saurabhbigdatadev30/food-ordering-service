@@ -34,6 +34,7 @@ public class OrderCreateCommandHandler {
     @Transactional
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand)
     {
+        log.info("In TestBranch ");
         OrderCreatedEvent orderCreatedEvent = orderCreateHelper.persistOrder(createOrderCommand);
         log.info("Order is created with id: {}", orderCreatedEvent.getOrder().getId().getValue());
         CreateOrderResponse createOrderResponse = orderDataMapper.orderToCreateOrderResponse(orderCreatedEvent.getOrder(),

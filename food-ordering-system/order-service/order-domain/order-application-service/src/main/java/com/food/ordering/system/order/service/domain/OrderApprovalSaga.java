@@ -53,7 +53,7 @@ public class OrderApprovalSaga implements SagaStep<RestaurantApprovalResponse> {
                 approvalOutboxHelper.getApprovalOutboxMessageBySagaIdAndSagaStatus(
                         UUID.fromString(restaurantApprovalResponse.getSagaId()),
                         SagaStatus.PROCESSING);
-
+        log.info("In TestBranch ");
         if (orderApprovalOutboxMessageResponse.isEmpty()) {
             log.info("An outbox message with saga id: {} is already processed!",
                     restaurantApprovalResponse.getSagaId());
@@ -109,6 +109,7 @@ public class OrderApprovalSaga implements SagaStep<RestaurantApprovalResponse> {
     }
 
     private Order approveOrder(RestaurantApprovalResponse restaurantApprovalResponse) {
+        log.info("In TestBranch ");
         log.info("Approving order with id: {}", restaurantApprovalResponse.getOrderId());
         Order order = orderSagaHelper.findOrder(restaurantApprovalResponse.getOrderId());
         orderDomainService.approveOrder(order);
