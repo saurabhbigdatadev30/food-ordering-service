@@ -34,7 +34,7 @@ class CustomerCreateCommandHandler {
         CustomerCreatedEvent customerCreatedEvent = customerDomainService.validateAndInitiateCustomer(customer);
         Customer savedCustomer = customerRepository.createCustomer(customer);
         if (savedCustomer == null) {
-            log.error("Could not save customer with id: {}", createCustomerCommand.getCustomerId());
+           
             throw new CustomerDomainException("Could not save customer with id " +
                     createCustomerCommand.getCustomerId());
         }
