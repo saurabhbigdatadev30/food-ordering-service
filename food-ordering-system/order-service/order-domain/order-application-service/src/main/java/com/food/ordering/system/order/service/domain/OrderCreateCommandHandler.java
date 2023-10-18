@@ -26,6 +26,7 @@ public class OrderCreateCommandHandler {
                                      PaymentOutboxHelper paymentOutboxHelper,
                                      OrderSagaHelper orderSagaHelper)
     {
+        log.info("In TestBranch collaborator 1 ");
         log.info("In TestBranch ");
         this.orderCreateHelper = orderCreateHelper;
         this.orderDataMapper = orderDataMapper;
@@ -36,7 +37,7 @@ public class OrderCreateCommandHandler {
     @Transactional
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand)
     {
-        log.info("In TestBranch ");
+        log.info("In TestBranch XX ");
         log.info("In TestBranch 2 ");
 
         OrderCreatedEvent orderCreatedEvent = orderCreateHelper.persistOrder(createOrderCommand);
