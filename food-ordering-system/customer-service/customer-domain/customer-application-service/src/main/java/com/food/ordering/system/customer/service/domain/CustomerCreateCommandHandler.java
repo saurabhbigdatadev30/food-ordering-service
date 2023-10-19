@@ -33,8 +33,9 @@ class CustomerCreateCommandHandler {
         Customer customer = customerDataMapper.createCustomerCommandToCustomer(createCustomerCommand);
         CustomerCreatedEvent customerCreatedEvent = customerDomainService.validateAndInitiateCustomer(customer);
         Customer savedCustomer = customerRepository.createCustomer(customer);
-        int a = 69;
-        log.info("inside the test branch");
+        int a = 669;
+        log.error("inside the test branch");
+
         if (savedCustomer == null) {
             log.error("Could not save customer with id: {}", createCustomerCommand.getCustomerId());
             throw new CustomerDomainException("Could not save customer with id " +
