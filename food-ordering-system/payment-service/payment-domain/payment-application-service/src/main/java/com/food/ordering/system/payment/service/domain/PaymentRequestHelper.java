@@ -59,7 +59,9 @@ public class PaymentRequestHelper {
     {
 
         log.error("inside persist method");
+
         int a  = 53;
+
 
         if (publishIfOutboxMessageProcessedForPayment(paymentRequest, PaymentStatus.COMPLETED))
         {
