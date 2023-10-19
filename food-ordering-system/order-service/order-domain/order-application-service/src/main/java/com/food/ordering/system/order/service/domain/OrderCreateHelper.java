@@ -54,7 +54,7 @@ public class OrderCreateHelper {
         OrderCreatedEvent orderCreatedEvent = orderDomainService.validateAndInitiateOrder(order, restaurant);
         // Persist the Entity
         saveOrder(order);
-        log.info("Order is created with id: {}", orderCreatedEvent.getOrder().getId().getValue());
+        log.debug("Order is created with id: {}", orderCreatedEvent.getOrder().getId().getValue());
         // Returns the Event
         return orderCreatedEvent;
     }
@@ -64,7 +64,7 @@ public class OrderCreateHelper {
         Restaurant restaurant = orderDataMapper.createOrderCommandToRestaurant(createOrderCommand);
         Optional<Restaurant> optionalRestaurant = restaurantRepository.findRestaurantInformation(restaurant);
         if (optionalRestaurant.isEmpty()) {
-            log.warn("Could not find restaurant with restaurant id: {}", createOrderCommand.getRestaurantId());
+            log.error("Could not find restaurant with restaurant id: {}", createOrderCommand.getRestaurantId());
             throw new OrderDomainException("Could not find restaurant with restaurant id: " +
                     createOrderCommand.getRestaurantId());
         }
@@ -85,7 +85,7 @@ public class OrderCreateHelper {
             log.error("Could not save order!");
             throw new OrderDomainException("Could not save order!");
         }
-        log.info("Order is saved with id: {}", orderResult.getId().getValue());
+        log.debug("Order is saved with id: {}", orderResult.getId().getValue());
         return orderResult;
     }
 }
