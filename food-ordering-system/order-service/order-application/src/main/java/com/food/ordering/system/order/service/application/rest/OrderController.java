@@ -25,6 +25,8 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<CreateOrderResponse> createOrder(@RequestBody CreateOrderCommand createOrderCommand) {
+        int a = 669;
+        log.error("inside the test branch");
         log.info("Creating order for customer = {} at restaurant = {}", createOrderCommand.getCustomerId(),
                    createOrderCommand.getRestaurantId());
         CreateOrderResponse createOrderResponse = orderApplicationService.createOrder(createOrderCommand);
