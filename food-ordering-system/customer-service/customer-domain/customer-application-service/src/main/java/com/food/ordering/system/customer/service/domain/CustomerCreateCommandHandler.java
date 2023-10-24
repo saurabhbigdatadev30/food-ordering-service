@@ -33,6 +33,8 @@ class CustomerCreateCommandHandler {
         Customer customer = customerDataMapper.createCustomerCommandToCustomer(createCustomerCommand);
         CustomerCreatedEvent customerCreatedEvent = customerDomainService.validateAndInitiateCustomer(customer);
         Customer savedCustomer = customerRepository.createCustomer(customer);
+
+
         int a = 669;
         log.error("inside the test branch");
 
